@@ -13,5 +13,4 @@ function receiveMessage(event) {
       document.getElementById("myIframe").style.height = "100px";
     }, 1000);
   }
-  console.log("Received parameter: " + parameter);
 }
