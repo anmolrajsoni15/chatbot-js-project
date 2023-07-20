@@ -1,6 +1,8 @@
 // Create the iframe element
 var iframeSrc = window.blocConfig.blocId;
 
+console.log("iframeSrc", iframeSrc);
+
 var iframe = document.createElement("iframe");
 iframe.id = "myIframe";
 iframe.src = `https://embed.askbloc.ai/bloc/${iframeSrc}`;
