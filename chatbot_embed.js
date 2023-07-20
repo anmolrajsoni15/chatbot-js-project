@@ -1,6 +1,9 @@
 // Create the iframe element
+var iframeSrc = window.blocConfig.blocId;
+
 var iframe = document.createElement("iframe");
 iframe.id = "myIframe";
+iframe.src = iframeSrc;
 iframe.style.position = "fixed";
 iframe.style.width = "100px";
 iframe.style.height = "100px";
@@ -19,14 +22,10 @@ function receiveMessage(event) {
     parameter = JSON.stringify(parameter);
   }
 
-  // Set the src attribute of the iframe
-  var iframeSrc = parameter.srcUrl;
-  document.getElementById("myIframe").src = iframeSrc;
-
-  if (parameter.status === "open") {
+  if (parameter === "open") {
     document.getElementById("myIframe").style.width = "350px";
     document.getElementById("myIframe").style.height = "600px";
-  } else if (parameter.status === "close") {
+  } else if (parameter === "close") {
     setTimeout(() => {
       document.getElementById("myIframe").style.width = "100px";
       document.getElementById("myIframe").style.height = "100px";
