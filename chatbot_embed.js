@@ -3,7 +3,7 @@ var iframeSrc = window.blocConfig.blocId;
 
 var iframe = document.createElement("iframe");
 iframe.id = "myIframe";
-iframe.src = iframeSrc;
+iframe.src = `https://embed.askbloc.ai/bloc/${iframeSrc}`;
 iframe.style.position = "fixed";
 iframe.style.width = "100px";
 iframe.style.height = "100px";
